@@ -1,0 +1,132 @@
+h4, h3{
+    margin: 0;
+}
+.grid-files {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.container-file {
+    border: black 1px solid;
+    border-radius: .5rem;
+    padding: .8rem;
+    cursor: pointer;
+}
+
+.container-file h5 {
+    margin: .6rem 0 0 0;
+}
+
+.mt{
+    margin-top: 4.5rem;
+}
+
+.fa-arrow-left{
+    font-size: 1.5rem;
+    margin-right: .6rem;
+}
+
+.header-folder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.container-button{
+    display: flex;
+}
+
+.upload-button{
+    position: relative;
+    padding: .8rem 1.8rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #6300E7;
+    border-radius: 10rem;
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+.upload-input{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.container-uploading-popup{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.uploading-popup{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    padding: 2rem 3rem;
+}
+
+.config-popup{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1.2rem;
+    width: 30%;
+}
+.progress-bar{
+    width: 10rem;
+}
+
+.config-popup button{
+    background-color: transparent;
+    border: none;
+    margin-top: .8rem;
+}
+
+.config-popup input{
+    padding: .3rem;
+    width: 100%;
+    margin-top: .5rem;
+}
+
+
+.times {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.div-button{
+    text-align: end;
+}
+
+.rename-button{
+
+    background-color: #6300E7 !important;
+    color: white;
+    padding: .3rem .5rem;
+}
+
+.fa-ellipsis-h{
+    font-size: 1.4rem;
+}

@@ -1,0 +1,38 @@
+<div class="no-mobile navbar-container container" id="no-mobile">
+
+    <div class="flex">
+        <i class="fas fa-bars" (click)="openSideBar()"></i>
+        <a  class="fileBox-logo" routerLink='/u/dashboard'>fileBox</a>
+    </div>
+
+    <div>
+        <input [(ngModel)]="searchBar" name="searchBar" type="search" placeholder="Search" *ngIf="showSearch" (keyup)="searchFileOrFolder()">
+        <i *ngIf="!showSearch" class="fas fa-search" (click)="search()"></i>
+        <i *ngIf="showSearch" class="fas fa-times" (click)="closeSearch()"></i>
+        <i class="fas fa-user" (click)="ShowProfile()"></i>
+    </div>
+
+</div>
+
+<div class="all-screen" *ngIf="sidebar">
+
+    <div class="side-bar" id="side-bar">
+        <div class="menu-options">
+            <i class="fas fa-times" (click)="closeSideBar()"></i>
+            <a routerLink='/u/dashboard' (click)="closeSideBar()">Dashboard</a>
+            <a routerLink='/u/all-folders' (click)="closeSideBar()">All folders</a>
+            <a routerLink='/u/all-files' (click)="closeSideBar()">All files</a>
+        </div>
+
+        <div class="made-bonilla">
+            <h4>by Andres Bonilla</h4>
+        </div>
+    </div>
+
+
+</div>
+
+<app-user-menu *ngIf="showUserMenu"></app-user-menu>
+
+<!-- navbar for mobile devices -->
+<app-navbar-mobile class="mobile" id="mobile"></app-navbar-mobile>>

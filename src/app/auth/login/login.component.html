@@ -1,0 +1,29 @@
+<div class="loading-part" *ngIf="!showHtml">
+    <i class="fas fa-fan fa-spin"></i>
+</div>
+
+<div class="container-auth" id="container-auth">
+    <div class="auth-box" id="auth-box">
+        <form [formGroup]="formGroup">
+
+            <h2>fileBox</h2>
+
+            <div class="input-field">
+                <input formControlName="email" type="email" placeholder="Email">
+                <p *ngIf="!firstTime && this.formGroup.get('email').errors?.required">The email is required</p>
+                <p *ngIf="!firstTime && this.formGroup.get('email').errors?.email">The email is invalid</p>
+            </div>
+
+            <div class="input-field">
+                <input formControlName="password" type="password" placeholder="Password">
+                <p *ngIf="!firstTime && this.formGroup.get('password').errors?.required">The password is required</p>
+                <p *ngIf="!firstTime && this.formGroup.get('password').errors?.minlength">The password must contain at least 8 characters</p>
+            </div>
+
+            <button class="pointer" (click)="login()">LOGIN</button>
+
+        </form>
+
+        <p class="text-below">if you don't have an account <a routerLink="/register">Register</a></p>
+    </div>
+</div>

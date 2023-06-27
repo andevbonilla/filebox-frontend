@@ -1,0 +1,46 @@
+h3 {
+    margin: 1.5rem 0;
+    color: #6300E7;
+}
+.grid-files {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+}
+
+.container-folder {
+    border: black 1px solid;
+    border-radius: .5rem;
+    padding: .8rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+.container-folder .fa-folder {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.add-new {
+    margin-top: 4.6rem;
+}
+
+.add-button {
+    padding: .8rem 1.8rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #6300E7;
+    border-radius: 10rem;
+    border: none;
+}
+
+.folder-link{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+h4{
+    margin: 0;
+}

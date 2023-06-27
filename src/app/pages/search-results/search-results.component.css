@@ -1,0 +1,38 @@
+.files-tittle{
+    margin-top: 5rem;
+}
+
+.grid-files {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+
+.container-folder {
+    border: black 1px solid;
+    border-radius: .5rem;
+    padding: .8rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+.container-folder .fa-folder {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.folder-link{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+h3{
+    margin: 1.5rem 0;
+}
+
+span{
+    font-weight: bold;
+}

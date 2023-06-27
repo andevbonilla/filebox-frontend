@@ -1,0 +1,135 @@
+
+/* color: 6300E7  */
+
+@media(max-width:330px){
+
+    #grid-files {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #container-auth{
+        margin: 0 5%;
+    }
+
+    #auth-box {
+        width: 89%;
+    }
+
+}
+@media(max-width:530px) and (min-width:331px){
+
+    #grid-files {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #container-auth{
+        margin: 0 5%;
+    }
+
+    #auth-box {
+        width: 80%;
+    }
+
+}
+@media(max-width:780px) and (min-width:531px){
+
+    #grid-files {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #auth-box {
+        width: 80%;
+    }
+
+}
+@media(max-width:950px) and (min-width:781px){
+
+    #grid-files {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #auth-box {
+        width: 50%;
+    }
+
+}
+@media(max-width:1400px) and (min-width:951px){
+
+    #grid-files {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    #auth-box {
+        width: 40%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif ;
+}
+
+
+.container {
+    padding: 0 2.5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.container-auth {
+    margin: 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.auth-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem;
+    align-items: center;
+    text-align: center;
+    border-radius: .5rem;
+    width: 30%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.loading-part{
+    
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-part i{
+    color: #6300E7;
+    font-size: 2rem;
+}
+
+.footer{
+    padding-bottom: 2.5rem;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

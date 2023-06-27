@@ -1,0 +1,78 @@
+<div class="loading-part" *ngIf="!showHtml">
+    <i class="fas fa-fan fa-spin"></i>
+</div>
+
+
+<div class="container mt" *ngIf="showHtml">
+
+    <div class="header-folder">
+
+        <div class="flex">
+            <i (click)="goBack()" class="fas fa-arrow-left pointer"></i>
+            <h3>{{folder.name}}</h3>
+        </div>
+
+        <div>
+            <i (click)="openConfigFolder()" class="fas fa-ellipsis-h pointer"></i>
+        </div>
+        
+    </div>
+    
+    <div class="container-button">
+        <div class="upload-button pointer">
+            <h4><i class="fas fa-upload"></i> Upload file</h4>
+            <input type="file" class="upload-input pointer" #image name="fileImg" (change)="uploadFile()">
+        </div>
+    </div>
+    
+    <div class="grid-files" id="grid-files">
+    
+        <div *ngFor="let file of folderFiles">
+            <app-file-info [file]="file"></app-file-info>
+        </div>
+    
+    </div>
+
+    
+</div>
+
+<!-- uploading window -->
+<div class="container-uploading-popup" *ngIf="uploading">
+    <div class="uploading-popup">
+        <h4>{{popupText}}...</h4>
+        <mat-progress-bar class="progress-bar" mode="indeterminate"></mat-progress-bar>
+    </div>
+</div>
+
+<!-- config window -->
+<div class="container-uploading-popup" *ngIf="configPopup">
+    <div class="config-popup">
+
+        <!-- config part -->
+        <div class="times" *ngIf="isInConfig">
+            <h3>Config</h3>
+            <i (click)="closeConfigPopup()" class="fas fa-times pointer"></i>
+        </div>
+
+        <div class="buttons" *ngIf="isInConfig">
+            <button class="pointer" (click)="isInConfig = false">Rename</button>
+            <button class="pointer" (click)="deleteFolder()">Delete</button>
+        </div>
+
+        <!-- rename part -->
+        <div class="times" *ngIf="!isInConfig">
+            <h3>Rename</h3>
+            <i (click)="isInConfig = true" class="fas fa-times pointer"></i>
+        </div>
+
+        <div *ngIf="!isInConfig">
+            <input [(ngModel)]="newName" type="text" name="newName" placeholder="new name">
+        </div>
+
+        <div class="div-button" *ngIf="!isInConfig">
+            <button class="rename-button pointer" (click)="renameFolder()">Rename</button>
+        </div>
+
+    </div>
+</div>
+

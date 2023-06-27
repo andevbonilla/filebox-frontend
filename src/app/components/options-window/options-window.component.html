@@ -1,0 +1,50 @@
+<div *ngIf="globalVariablesService.showOptionsWindow" class="black-background">
+
+    <div *ngIf="!showAddNewFolder" class="popup">
+
+        <div>
+            <i (click)="closePopup()" class="fas fa-times"></i>
+        </div>
+        
+
+        <div class="options-popup">
+            <div class="option pointer">
+                <i class="fas fa-file-upload"></i>
+                <h4>add new file</h4>
+                <input type="file" class="upload-input" #image name="fileImg" (change)="uploadFile()">
+            </div>
+
+            <div class="option pointer" (click)="showAddNewFolder = true">
+                <i class="fas fa-folder"></i>
+                <h4>add new folder</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- add new folder popup -->
+
+    <div *ngIf="showAddNewFolder" class="popup">
+
+        <div>
+            <i (click)="closePopup()" class="fas fa-times pointer"></i>
+        </div>
+        
+
+        <div class="create-folder">
+            <input type="text" placeholder="Folder name" [(ngModel)]="foldername" name="foldername">
+            <button (click)="createNewFolder()">create</button>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<div class="container-uploading-popup" *ngIf="uploading">
+    <div class="uploading-popup">
+        <h4>{{popupText}}...</h4>
+        <mat-progress-bar class="progress-bar" mode="indeterminate"></mat-progress-bar>
+    </div>
+</div>

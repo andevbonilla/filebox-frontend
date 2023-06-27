@@ -1,0 +1,52 @@
+@media (max-width:400px) {
+    #view-file img, video, audio{
+        max-width: 100%;
+    }
+
+    #pdf-view{
+        width: 90%;
+        display: block;
+    }
+    
+}
+
+@media (max-width:520px) and (min-width:401px) {
+    #view-file img, video, audio{
+        max-width: 90%;
+    }
+    
+    #pdf-view{
+        width: 90%;
+        display: block;
+    }
+}
+
+.view-file{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.view-file img, video, audio{
+    max-width: 50%;
+}
+
+.pdf-view{
+    display: block;
+    width: 85%;
+    height: 85%;
+}
+
+.download-button{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #6300E7;
+    color: white;
+    margin: 0 2.5rem 2.5rem 0;
+    padding: .7rem 1rem;
+    font-size: 1.4rem;
+}

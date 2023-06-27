@@ -1,0 +1,27 @@
+<div class="loading-part" *ngIf="!showHtml">
+    <i class="fas fa-fan fa-spin"></i>
+</div>
+
+<div class="container" *ngIf="showHtml">
+
+    <div class="no-found" *ngIf="folders.length === 0">
+        <h4>No folder found</h4>
+    </div>
+
+    <div class="grid-files" id="grid-files">
+
+        <div *ngFor="let folder of folders">
+    
+            <a class="container-folder flex folder-link" routerLink='/u/folder/{{folder._id}}'>
+                <i class="fas fa-folder"></i>
+                <h4>{{folder.name | slice:0:12}}<span *ngIf="folder.name.length>12">...</span></h4>
+            </a>
+    
+        </div>
+    
+    </div>
+
+    
+</div>
+
+

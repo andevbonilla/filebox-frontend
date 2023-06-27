@@ -1,0 +1,20 @@
+<div class="loading-part" *ngIf="!showHtml">
+    <i class="fas fa-fan fa-spin"></i>
+</div>
+
+<div class="view-file" id="view-file" *ngIf="showHtml">
+
+    <img [src]="fileUrlSigned" alt="imagen" *ngIf="isImage">
+
+    <video [src]="fileUrlSigned" controls *ngIf="isVideo"></video>
+
+    <audio [src]="fileUrlSigned" controls *ngIf="isAudio"></audio>
+
+    <h3 *ngIf="isNothing || isPdf">the file cannot be displayed, so please download it</h3>
+    
+    <div >
+        <a class="download-button" [href]="fileUrlSigned"><i class="fas fa-download"></i> Download</a>
+    </div>
+    
+
+</div>

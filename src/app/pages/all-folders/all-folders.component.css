@@ -1,0 +1,37 @@
+.grid-files {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin-top: 5rem;
+}
+
+.folder-link{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.container-folder {
+    border: black 1px solid;
+    border-radius: .5rem;
+    padding: .8rem;
+    cursor: pointer;
+    align-items: center;
+}
+
+.container-folder .fa-folder {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+h4{
+    margin: 0;
+}
+
+.no-found{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

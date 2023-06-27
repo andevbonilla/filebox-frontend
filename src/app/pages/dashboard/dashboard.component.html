@@ -1,0 +1,44 @@
+<div class="loading-part" *ngIf="!showHtml">
+    <i class="fas fa-fan fa-spin"></i>
+</div>
+
+<div class="container" *ngIf="showHtml">
+
+    <div class="add-new">
+        <button (click)="openOptionsWindow()" class="pointer add-button" type="button"><i class="fas fa-plus"></i> new</button>
+    </div>
+
+
+    <app-options-window></app-options-window>
+    
+    <h3 *ngIf="globalVariablesService.userFiles.length > 0">Recent Uploads</h3>
+    <div class="grid-files" id="grid-files">
+
+        <div  *ngFor="let file of globalVariablesService.userFiles">
+                <app-file-info [file]="file"></app-file-info>
+        </div>
+
+        
+
+    </div>
+
+    <h3 *ngIf="globalVariablesService.userFolders.length > 0">Folders</h3>
+    <div class="grid-files" id="grid-files">
+
+        <div *ngFor="let folder of globalVariablesService.userFolders">
+
+            <a class="container-folder flex folder-link" routerLink='/u/folder/{{folder._id}}'>
+                <i class="fas fa-folder"></i>
+                <h4>{{folder.name | slice:0:12}}<span *ngIf="folder.name.length>12">...</span></h4>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="footer">
+
+</div>
+

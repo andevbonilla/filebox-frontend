@@ -1,0 +1,19 @@
+<div class="loading-part" *ngIf="!showHtml">
+    <i class="fas fa-fan fa-spin"></i>
+</div>
+
+<div class="container" *ngIf="showHtml">
+
+    <div class="no-found" *ngIf="files.length === 0">
+        <h4>No file found</h4>
+    </div>
+
+    <div class="grid-files" id="grid-files">
+        <div  *ngFor="let file of files">
+            <app-file-info [file]="file"></app-file-info>
+        </div>
+    </div>
+
+</div>
+
+

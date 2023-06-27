@@ -1,0 +1,13 @@
+.grid-files {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    margin-top: 5rem;
+}
+
+.no-found{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

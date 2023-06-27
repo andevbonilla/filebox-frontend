@@ -1,0 +1,55 @@
+<div class="loading-part" *ngIf="!showHtml">
+    <i class="fas fa-fan fa-spin"></i>
+</div>
+
+
+<div class="container-file" *ngIf="showHtml">
+    <i (click)="openMenuFile()" class="fas fa-ellipsis-h pointer"></i>
+    
+
+
+        <a class="link-file" routerLink='/u/file/{{file._id}}'>
+            <div class="single-file">
+                <img [src]="fileUrlSigned" [alt]="file.img" *ngIf="isImage">
+                <video [src]="fileUrlSigned" *ngIf="isVideo"></video>
+                <i class="fas fa-file-audio" *ngIf="isAudio"></i>
+                <i class="fas fa-file-pdf" *ngIf="isPdf"></i>
+            </div>
+        </a>
+            <div class="name-part">
+                <h5>{{file.name | slice:0:25}}<span *ngIf="file.name.length>25">...</span></h5>
+            </div>
+        
+
+        <div class="edit-menu" *ngIf="menuFile">
+            <i (click)="closeMenuFile()" class="fas fa-times pointer"></i>
+            <div>
+                <button type="button" (click)="deleteFile(file._id)">Delete</button>
+                <button type="button" (click)="renameFile()">Rename</button>
+                <button type="button" (click)="moveTo()">Move To</button>
+            </div>
+
+        </div>
+</div>
+
+<div class="container-popup" *ngIf="renamePoppup">
+    <div class="popup-rename">
+
+
+        <div class="rename-form">
+
+            <div class="header-form">
+                <h3>Change name</h3>
+                <i class="fas fa-times" (click)="closeRenamePopup()"></i>
+            </div>
+            
+            <input [(ngModel)]="fileName" name="fileName" class="rename-input" type="text" placeholder="new name">
+        </div>
+
+
+            <button (click)="uptadeFile()">accept</button>
+    </div>
+</div>
+
+
+<app-move-to></app-move-to>

@@ -1,0 +1,126 @@
+.container-file {
+    position: relative;
+    border: black 1px solid;
+    border-radius: .5rem;
+    height: 100%;
+}
+
+.container-file h5 {
+    margin: .6rem 0 0 0;
+}
+
+.fa-ellipsis-h{
+    position: absolute;
+    font-size: 1.4rem !important;
+    padding: .8rem;
+    top: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.single-file {
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.single-file img, video{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: .5rem .5rem 0 0 ;
+}
+
+.single-file i{
+    font-size: 4rem;
+}
+
+.fa-file-pdf{
+    color: red;
+}
+
+.name-part{
+    padding: .8rem;
+}
+
+a{
+    color: black;
+}
+.edit-menu{
+    position: absolute;
+    background-color: white;
+    padding: .8rem;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.edit-menu div{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.edit-menu button{
+    margin-top: .5rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.rename-input{
+    padding: .3rem;
+}
+
+.container-popup{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-rename{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.popup-rename button{
+    background-color: #6300E7;
+    color: white;
+    padding: .3rem .8rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: .9rem;
+}
+
+.fa-times{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.rename-form h3{
+    margin-bottom: 1rem;
+}
+
+.header-form{
+    display: flex;
+    justify-content: space-between;
+}

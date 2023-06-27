@@ -1,0 +1,37 @@
+<div class="loading-part" *ngIf="!showHtml">
+    <i class="fas fa-fan fa-spin"></i>
+</div>
+
+<div class="container-auth" id="container-auth">
+    <div class="auth-box" id="auth-box">
+
+        <h2>fileBox</h2>
+        <form [formGroup]="formGroup">
+
+            <div class="input-field">
+                <input formControlName="username" type="text" placeholder="Name">
+                <p *ngIf="!firstTime && this.formGroup.get('username').errors?.minlength">The username must contain at least 2 characters</p>
+                <p *ngIf="!firstTime && this.formGroup.get('username').errors?.required">The username is required</p>
+                <p *ngIf="!firstTime && this.formGroup.get('username').errors?.maxlength">the username cannot be more than 25 characters</p>
+            </div>
+
+            <div class="input-field">
+                <input formControlName="email" type="email" placeholder="Email">
+                <p *ngIf="!firstTime && this.formGroup.get('email').errors?.required">The email is required</p>
+                <p *ngIf="!firstTime && this.formGroup.get('email').errors?.email">The email is invalid</p>
+            </div>
+
+            <div class="input-field">
+                <input formControlName="password" type="password" placeholder="Password">
+                <p *ngIf="!firstTime && this.formGroup.get('password').errors?.minlength">The password must contain at least 8 characters</p>
+                <p *ngIf="!firstTime && this.formGroup.get('password').errors?.required">The password is required</p>
+            </div>
+
+            <button class="pointer" (click)="register()">REGISTER</button>
+
+            <p>if you already have an account <a routerLink="/login">Login</a></p>
+
+        </form>
+
+    </div>
+</div>

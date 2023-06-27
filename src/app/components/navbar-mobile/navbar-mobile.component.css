@@ -1,0 +1,89 @@
+@media (max-width:650px) {
+    #side-bar{
+        width: 70%;
+    } 
+}
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6300E7;
+    padding: 1rem 2.5rem;
+    color: white;
+    font-size: 1.2rem;
+    z-index: 997;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+.menu-options{
+    display: flex;
+    flex-direction: column;
+}
+.container-sidebar{
+    display: flex;
+    flex-direction: column;
+}
+.made-bonilla{
+    margin-bottom: 1rem;
+    color: white;
+}
+i {
+    cursor: pointer;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.side-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #6300E7;
+    height: 100vh;
+    width: 25%;
+}
+.side-bar i,
+a {
+    margin-top: 1rem;
+    color: white;
+    padding: 0;
+}
+.all-screen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+}
+.fileBox-logo{
+    margin: 0;
+
+}
+.search-part{
+    display: flex;
+    align-items: center;
+}
+
+.search-active{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-active input{
+    width: 100%;
+    padding: .3rem .5rem;
+    margin-right: 1rem;
+}
+
+.search-active i{
+   padding: 0;
+}
